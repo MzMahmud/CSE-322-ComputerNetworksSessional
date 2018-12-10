@@ -1,0 +1,409 @@
+Tue Nov 13 12:01:24 BDT 2018
+HTTPServer Starts listenning at PORT:: 8080
+
+Tue Nov 13 12:01:55 BDT 2018
+Client[1] is now connected.
+
+Tue Nov 13 12:01:55 BDT 2018
+Input From Request[1]
+
+GET / HTTP/1.1
+HOST: 127.0.0.1
+Connection: Close
+Accept-Language: en-us
+
+
+Tue Nov 13 12:01:55 BDT 2018
+Server Response to Request[1]
+
+HTTP/1.1 200 OK
+Date: Tue Nov 13 12:01:55 BDT 2018
+Server: 192.168.0.103:8080
+Last-Modified: Mon Nov 12 18:47:18 BDT 2018
+Accept-Ranges: bytes
+Connection: close
+Content-Type: text/html
+Tue Nov 13 12:01:55 BDT 2018
+Start Sending file -> ./index.html
+
+Tue Nov 13 12:01:55 BDT 2018
+File-> ./index.html sent successfully!
+
+Tue Nov 13 12:01:55 BDT 2018
+Closing Request[1]
+
+Tue Nov 13 12:09:38 BDT 2018
+Client[2] is now connected.
+
+Tue Nov 13 12:09:38 BDT 2018
+Input From Request[2]
+
+GET /cse322.html HTTP/1.1
+HOST: 127.0.0.1Connection: Close
+Accept-Language: en-us
+
+
+Tue Nov 13 12:09:53 BDT 2018
+Server Response to Request[2]
+
+HTTP/1.1 200 OK
+Date: Tue Nov 13 12:09:53 BDT 2018
+Server: 192.168.0.103:8080
+Last-Modified: Mon Nov 12 18:48:14 BDT 2018
+Accept-Ranges: bytes
+Connection: close
+Content-Type: text/html
+Tue Nov 13 12:09:53 BDT 2018
+Start Sending file -> ./cse322.html
+
+Tue Nov 13 12:09:53 BDT 2018
+File-> ./cse322.html sent successfully!
+
+Tue Nov 13 12:09:53 BDT 2018
+Closing Request[2]
+
+Tue Nov 13 12:43:58 BDT 2018
+Input From Request[3]
+
+Tue Nov 13 12:43:58 BDT 2018
+Client[3] is now connected.
+
+GET  HTTP/1.1
+Host: 127.0.0.1
+Accept-Language: en-us
+Connection: Close
+
+
+Tue Nov 13 12:43:58 BDT 2018
+Server Response to Request[3]
+
+HTTP/1.1 404 Not found
+Date: Tue Nov 13 12:43:58 BDT 2018
+Server: 192.168.0.103:8080
+Last-Modified: Mon Nov 12 18:40:40 BDT 2018
+Accept-Ranges: bytes
+Connection: close
+Tue Nov 13 12:43:58 BDT 2018
+Start Sending file -> 404.html
+
+Tue Nov 13 12:43:58 BDT 2018
+File-> 404.html sent successfully!
+
+Tue Nov 13 12:43:58 BDT 2018
+Closing Request[3]
+
+Tue Nov 13 12:44:59 BDT 2018
+Client[4] is now connected.
+
+Tue Nov 13 12:44:59 BDT 2018
+Input From Request[4]
+
+GET  HTTP/1.1
+Host: 127.0.0.1
+Accept-Language: en-us
+Connection: Close
+
+
+Tue Nov 13 12:44:59 BDT 2018
+Server Response to Request[4]
+
+HTTP/1.1 404 Not found
+Date: Tue Nov 13 12:44:59 BDT 2018
+Server: 192.168.0.103:8080
+Last-Modified: Mon Nov 12 18:40:40 BDT 2018
+Accept-Ranges: bytes
+Connection: close
+Tue Nov 13 12:44:59 BDT 2018
+Start Sending file -> 404.html
+
+Tue Nov 13 12:44:59 BDT 2018
+File-> 404.html sent successfully!
+
+Tue Nov 13 12:44:59 BDT 2018
+Closing Request[4]
+
+Tue Nov 13 12:45:56 BDT 2018
+Client[5] is now connected.
+
+Tue Nov 13 12:45:56 BDT 2018
+Input From Request[5]
+
+GET /index.html HTTP/1.1
+Host: 127.0.0.1
+Accept-Language: en-us
+Connection: Close
+
+
+Tue Nov 13 12:45:56 BDT 2018
+Server Response to Request[5]
+
+HTTP/1.1 200 OK
+Date: Tue Nov 13 12:45:56 BDT 2018
+Server: 192.168.0.103:8080
+Last-Modified: Mon Nov 12 18:47:18 BDT 2018
+Accept-Ranges: bytes
+Connection: close
+Content-Type: text/html
+Tue Nov 13 12:45:56 BDT 2018
+Start Sending file -> ./index.html
+
+Tue Nov 13 12:45:56 BDT 2018
+File-> ./index.html sent successfully!
+
+Tue Nov 13 12:45:56 BDT 2018
+Closing Request[5]
+
+Tue Nov 13 12:48:23 BDT 2018
+Client[6] is now connected.
+
+Tue Nov 13 12:48:23 BDT 2018
+Input From Request[6]
+
+GET / HTTP/1.1
+Host: 127.0.0.1
+Accept-Language: en-us
+Connection: Close
+
+
+Tue Nov 13 12:48:23 BDT 2018
+Server Response to Request[6]
+
+HTTP/1.1 200 OK
+Date: Tue Nov 13 12:48:23 BDT 2018
+Server: 192.168.0.103:8080
+Last-Modified: Mon Nov 12 18:47:18 BDT 2018
+Accept-Ranges: bytes
+Connection: close
+Content-Type: text/html
+Tue Nov 13 12:48:23 BDT 2018
+Start Sending file -> ./index.html
+
+Tue Nov 13 12:48:23 BDT 2018
+File-> ./index.html sent successfully!
+
+Tue Nov 13 12:48:23 BDT 2018
+Closing Request[6]
+
+Tue Nov 13 12:49:08 BDT 2018
+Client[7] is now connected.
+
+Tue Nov 13 12:49:08 BDT 2018
+Input From Request[7]
+
+GET / HTTP/1.1
+Host: localhost
+Accept-Language: en-us
+Connection: Close
+
+
+Tue Nov 13 12:49:08 BDT 2018
+Server Response to Request[7]
+
+HTTP/1.1 200 OK
+Date: Tue Nov 13 12:49:08 BDT 2018
+Server: 192.168.0.103:8080
+Last-Modified: Mon Nov 12 18:47:18 BDT 2018
+Accept-Ranges: bytes
+Connection: close
+Content-Type: text/html
+Tue Nov 13 12:49:08 BDT 2018
+Start Sending file -> ./index.html
+
+Tue Nov 13 12:49:09 BDT 2018
+File-> ./index.html sent successfully!
+
+Tue Nov 13 12:49:09 BDT 2018
+Closing Request[7]
+
+Tue Nov 13 13:08:46 BDT 2018
+Client[8] is now connected.
+
+Tue Nov 13 13:08:46 BDT 2018
+Input From Request[8]
+
+GET / HTTP/1.1
+Host: localhost
+Accept-Language: en-us
+Connection: Close
+
+
+Tue Nov 13 13:08:46 BDT 2018
+Server Response to Request[8]
+
+HTTP/1.1 200 OK
+Date: Tue Nov 13 13:08:46 BDT 2018
+Server: 192.168.0.103:8080
+Last-Modified: Mon Nov 12 18:47:18 BDT 2018
+Accept-Ranges: bytes
+Connection: close
+Content-Type: text/html
+Tue Nov 13 13:08:46 BDT 2018
+Start Sending file -> ./index.html
+
+Tue Nov 13 13:08:46 BDT 2018
+File-> ./index.html sent successfully!
+
+Tue Nov 13 13:08:46 BDT 2018
+Closing Request[8]
+
+Tue Nov 13 13:08:59 BDT 2018
+Client[9] is now connected.
+
+Tue Nov 13 13:08:59 BDT 2018
+Client[10] is now connected.
+
+Tue Nov 13 13:08:59 BDT 2018
+Input From Request[9]
+
+Tue Nov 13 13:08:59 BDT 2018
+Input From Request[10]
+
+GET /cse322.html HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9,bn;q=0.8
+If-Modified-Since: Mon Nov 12 18:48:14 BDT 2018
+
+
+Tue Nov 13 13:08:59 BDT 2018
+Server Response to Request[9]
+
+HTTP/1.1 200 OK
+Date: Tue Nov 13 13:08:59 BDT 2018
+Server: 192.168.0.103:8080
+Last-Modified: Mon Nov 12 18:48:14 BDT 2018
+Accept-Ranges: bytes
+Connection: close
+Content-Type: text/html
+Tue Nov 13 13:08:59 BDT 2018
+Start Sending file -> ./cse322.html
+
+Tue Nov 13 13:08:59 BDT 2018
+File-> ./cse322.html sent successfully!
+
+Tue Nov 13 13:08:59 BDT 2018
+Closing Request[9]
+
+GET /buetLogo.png HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36
+Accept: image/webp,image/apng,image/*,*/*;q=0.8
+Referer: http://localhost:8080/cse322.html
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9,bn;q=0.8
+If-Modified-Since: Tue Nov 06 23:40:11 BDT 2018
+
+
+Tue Nov 13 13:08:59 BDT 2018
+Server Response to Request[10]
+
+HTTP/1.1 200 OK
+Date: Tue Nov 13 13:08:59 BDT 2018
+Server: 192.168.0.103:8080
+Last-Modified: Tue Nov 06 23:40:11 BDT 2018
+Accept-Ranges: bytes
+Connection: close
+Content-Type: image/png
+Tue Nov 13 13:08:59 BDT 2018
+Start Sending file -> ./buetLogo.png
+
+Tue Nov 13 13:08:59 BDT 2018
+File-> ./buetLogo.png sent successfully!
+
+Tue Nov 13 13:08:59 BDT 2018
+Closing Request[10]
+
+Tue Nov 13 13:08:59 BDT 2018
+Client[11] is now connected.
+
+Tue Nov 13 13:08:59 BDT 2018
+Input From Request[11]
+
+GET /favicon.ico HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36
+Accept: image/webp,image/apng,image/*,*/*;q=0.8
+Referer: http://localhost:8080/cse322.html
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9,bn;q=0.8
+
+
+Tue Nov 13 13:08:59 BDT 2018
+Server Response to Request[11]
+
+HTTP/1.1 404 Not found
+Date: Tue Nov 13 13:08:59 BDT 2018
+Server: 192.168.0.103:8080
+Last-Modified: Mon Nov 12 18:40:40 BDT 2018
+Accept-Ranges: bytes
+Connection: close
+Tue Nov 13 13:08:59 BDT 2018
+Start Sending file -> 404.html
+
+Tue Nov 13 13:08:59 BDT 2018
+File-> 404.html sent successfully!
+
+Tue Nov 13 13:08:59 BDT 2018
+Closing Request[11]
+
+Tue Nov 13 13:09:47 BDT 2018
+Client[12] is now connected.
+
+Tue Nov 13 13:09:47 BDT 2018
+Input From Request[12]
+
+GET /moaz HTTP/1.1
+Host: localhost
+Accept-Language: en-us
+Connection: Close
+
+
+Tue Nov 13 13:09:47 BDT 2018
+Server Response to Request[12]
+
+HTTP/1.1 404 Not found
+Date: Tue Nov 13 13:09:47 BDT 2018
+Server: 192.168.0.103:8080
+Last-Modified: Mon Nov 12 18:40:40 BDT 2018
+Accept-Ranges: bytes
+Connection: close
+Tue Nov 13 13:09:47 BDT 2018
+Start Sending file -> 404.html
+
+Tue Nov 13 13:09:47 BDT 2018
+File-> 404.html sent successfully!
+
+Tue Nov 13 13:09:47 BDT 2018
+Closing Request[12]
+
+Tue Nov 13 13:16:49 BDT 2018
+Client[13] is now connected.
+
+Tue Nov 13 13:16:49 BDT 2018
+Input From Request[13]
+
+GET / HTTP/1.1
+Host: localhost
+Accept-Language: en-us
+Connection: Close
+
+
+Tue Nov 13 13:16:49 BDT 2018
+Server Response to Request[13]
+
+HTTP/1.1 200 OK
+Date: Tue Nov 13 13:16:49 BDT 2018
+Server: 192.168.0.103:8080
+Last-Modified: Mon Nov 12 18:47:18 BDT 2018
+Accept-Ranges: bytes
+Connection: close
+Content-Type: text/html
+Tue Nov 13 13:16:49 BDT 2018
+Start Sending file -> ./index.html
+
