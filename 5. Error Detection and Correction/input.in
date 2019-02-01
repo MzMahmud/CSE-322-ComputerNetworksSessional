@@ -1,4 +1,40 @@
-Hamming code
+Hamming Code
 2
-0.05
+0.03
 10101
+
+many errors
+4
+0.1
+10001
+
+no error
+3
+0
+101
+
+Error Correction
+4
+.02
+101011
+
+physical layer
+3
+.05
+1010
+
+Error Detection
+3
+.02
+10111
+
+Computer Networks
+4
+.04
+1010111
+
+
+a
+1
+0.0
+101
