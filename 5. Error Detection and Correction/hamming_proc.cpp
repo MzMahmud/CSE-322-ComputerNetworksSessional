@@ -12,10 +12,8 @@ string bitstring_to_string(string bit_str){
     for(int i = 0;i < (int)bit_str.length();i += 8){
         char cstr[10];
         sprintf(cstr,"%c",stoi(bit_str.substr(i,8),nullptr,2));
-        //printf("cstr %s\n",cstr );
         str += string(cstr);
     }
-    //cout << "bitstring_to_string() : str " << str << endl;
     return str;
 }
 
@@ -25,6 +23,7 @@ int find_r(int m){
     while( (m+r+1) > (1<<r) ) r++;
     return r;
 }
+
 bool is_power_of_2 (int n){
     if(!n) return false;
     int p = (int)sizeof(n)*8 - 1;
@@ -33,6 +32,7 @@ bool is_power_of_2 (int n){
     }
     return !n;
 }
+
 string get_hamming_code(string bit_str,int m){
     int n = m + find_r(m);//total code length
     string hamming_code("");
@@ -41,7 +41,7 @@ string get_hamming_code(string bit_str,int m){
         if(!is_power_of_2(ind)){
             hamming_code += bit_str.substr(bs_i,1);
             bs_i++;
-        }else hamming_code += string("0");//DEBUG: string("2");
+        }else hamming_code += string("0");
         ind++;
     }
 
@@ -63,6 +63,7 @@ string get_hamming_code(string bit_str,int m){
 void print_hamming_code(string hamming_code){
     for(int i = 1;i <= hamming_code.length();i++){
         if(is_power_of_2(i))
+            //makes the text GREEN in terminal
             printf(GRN "%c" RESET_COL, hamming_code[i-1]);
         else
             printf("%c", hamming_code[i-1]);
@@ -70,7 +71,7 @@ void print_hamming_code(string hamming_code){
     cout << endl;
 }
 
-string hamming_correcsion(string hamming_code,int m){
+string hamming_correction(string hamming_code,int m){
     int n = m + find_r(m);//total code length
 
     int error_bit_index = 0;
@@ -91,7 +92,6 @@ string hamming_correcsion(string hamming_code,int m){
     if(1 <= error_bit_index && error_bit_index <= n)
         hamming_code[error_bit_index - 1] = (hamming_code[error_bit_index - 1] == '0')?'1':'0';
 
-    // print_hamming_code(hamming_code);
     string bit_str("");
     for(int i = 1;i <= n;i++){
         if(!is_power_of_2(i))
@@ -110,7 +110,6 @@ string serialize_column_major(vector<string> data_block,int col){
 
 vector<string> deserialize_column_major(string data_frame,int row){
     vector<string> data_block;
-
     for(int i = 0;i < row;i++)
         data_block.push_back(string(""));
 
@@ -139,6 +138,7 @@ string transmit(string data_frame,double corruption_probability,map<int,bool>& i
 void print_corrupted_data(string data,map<int,bool>& is_corrupted){
     for(int i = 0;i < data.length();i++){
         if(is_corrupted[i])
+            //makes the color red in terminal
             printf(RED "%c" RESET_COL,data[i]);
         else
             printf("%c",data[i]);
@@ -150,7 +150,10 @@ void print_corrupted_data(vector<string> data_block,map<int,bool>& is_corrupted)
     int row = (int) data_block.size();
     for(int i = 0;i < row;i++){
         for(int j = 0;j < data_block[i].length();j++){
+            //column-major order to linear index
+            //(i,j) -> j*row + i
             if(is_corrupted[j*row + i])
+                //makes the color red in terminal
                 printf(RED "%c" RESET_COL,data_block[i][j]);
             else
                 printf("%c",data_block[i][j]);

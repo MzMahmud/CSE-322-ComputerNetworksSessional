@@ -9,15 +9,19 @@ int main (){
     //INPUT:
     cout << "enter data string: ";
     getline(cin,data_string);
+    cout << endl;
 
     cout << "enter number of bytes in a row (m): ";
     cin >> m;
+    cout << endl;
 
     cout << "enter probability of each bit being toggled (p) in range [0,1]: ";
     cin >> p;
+    cout << endl;
 
     cout << "enter generator polynomial: ";
     cin >> generator_polynomial;
+    cout << endl;
 
     //Pad string
     cout << "\n\nInput data string         : " << data_string << "\n";
@@ -32,11 +36,8 @@ int main (){
 
     len = (int) data_string.length();
     vector<string> data_block;
-    for(int i = 0;i < len;i += m){
-        //DEBUG: string sub_str = data_string.substr(i,m);
-        //DEBUG: << sub_str << endl;
+    for(int i = 0;i < len;i += m)
         data_block.push_back(data_string.substr(i,m));
-    }
 
     cout << "data block (m characters per row) : " << endl;
     for(int i = 0;i < data_block.size();i++){
@@ -75,13 +76,10 @@ int main (){
     else
         cout << "no error detected" << endl;
 
-    // cout << "data_frame.length()  " << data_frame.length() << endl;
+
     //remove CRC_checksum
     int crc_checksum_len = ( (int) generator_polynomial.length() ) - 1;
     while(crc_checksum_len--) data_frame.pop_back();
-    //
-    // cout << "data_frame.length()  " << data_frame.length() << endl;
-    // cout << data_frame << endl;
 
     int row =  ( (int)data_frame.length() ) / hamming_code_length;
     data_block = deserialize_column_major(data_frame,row);
@@ -91,14 +89,13 @@ int main (){
 
     cout << endl << "data block after removing check bits: \n";
     for(int i = 0;i < data_block.size();i++){
-        data_block[i] = hamming_correcsion(data_block[i],8*m);
+        data_block[i] = hamming_correction(data_block[i],8*m);
         cout << data_block[i] << endl;
     }
 
     string output_frame("");
-    for (int i = 0; i < data_block.size(); i++) {
+    for (int i = 0; i < data_block.size(); i++)
         output_frame += data_block[i];
-    }
 
     output_frame = bitstring_to_string(output_frame);
     cout << endl << "output frame : " << output_frame << endl;

@@ -9,7 +9,6 @@ string XOR(string a,string b){
         bool x_bit = a_bit^b_bit;
         x_or[i] = (char) ( (int) x_bit + '0');
     }
-    //cout << "XOR() : " << x_or << endl;
     return x_or;
 }
 
@@ -17,8 +16,9 @@ string modulo_2_division(string a,string b){
     //append zero at the end of gen pol for division
     int b_len = (int) b.length();
 
-    int extra  = (int) a.length()
-               - (int) b.length();
+    int extra = (int) a.length()
+              - (int) b.length();
+
     for(int i = 0;i < extra;i++)
         b += string("0");
 
@@ -47,14 +47,3 @@ bool CRC_checksum_matching(string data_frame,string generator_polynomial){
         if(rem[i] != '0') return false;
     return true;
 }
-
-// int main(int argc, char const *argv[]) {
-//
-//     string frame("1010101010");
-//     string gen("11001");
-//     string crc = CRC_checksum(frame,gen);
-//     cout << crc << endl;
-//     frame[5] = frame[5]=='0'?'1':'0';
-//     cout << modulo_2_division(frame+crc,gen) << endl;
-//     return 0;
-// }
