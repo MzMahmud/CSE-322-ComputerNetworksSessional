@@ -9,19 +9,19 @@ int main (){
     //INPUT:
     cout << "enter data string: ";
     getline(cin,data_string);
-    cout << endl;
+    cout << data_string << endl;
 
     cout << "enter number of bytes in a row (m): ";
-    cin >> m;
-    cout << endl;
+    cin >>  m;
+    cout << m << endl;
 
     cout << "enter probability of each bit being toggled (p) in range [0,1]: ";
-    cin >> p;
-    cout << endl;
+    cin  >> p;
+    cout << p << endl;
 
     cout << "enter generator polynomial: ";
-    cin >> generator_polynomial;
-    cout << endl;
+    cin  >> generator_polynomial;
+    cout << generator_polynomial << endl;
 
     //Pad string
     cout << "\n\nInput data string         : " << data_string << "\n";
@@ -40,13 +40,13 @@ int main (){
         data_block.push_back(data_string.substr(i,m));
 
     cout << "data block (m characters per row) : " << endl;
-    for(int i = 0;i < data_block.size();i++){
+    for(int i = 0;i < (int) data_block.size();i++){
         data_block[i] = string_to_bitstring(data_block[i]);
         cout <<  data_block[i] << endl;
     }
 
     cout << endl << "data block after adding check bits : " << data_string << endl;
-    for(int i = 0;i < data_block.size();i++){
+    for(int i = 0;i < (int) data_block.size();i++){
         data_block[i] = get_hamming_code(data_block[i],8*m);//m here is in bytes.func expects bits
         print_hamming_code(data_block[i]);
     }
@@ -88,13 +88,13 @@ int main (){
     print_corrupted_data(data_block,is_corrupted);
 
     cout << endl << "data block after removing check bits: \n";
-    for(int i = 0;i < data_block.size();i++){
+    for(int i = 0;i < (int) data_block.size();i++){
         data_block[i] = hamming_correction(data_block[i],8*m);
         cout << data_block[i] << endl;
     }
 
     string output_frame("");
-    for (int i = 0; i < data_block.size(); i++)
+    for (int i = 0; i < (int) data_block.size(); i++)
         output_frame += data_block[i];
 
     output_frame = bitstring_to_string(output_frame);

@@ -3,7 +3,7 @@
 string XOR(string a,string b){
     string x_or;
     x_or = (a.length() > b.length())?a:b;
-    for(int i = 0;i < min(a.length(),b.length());i++){
+    for(int i = 0;i < (int) min(a.length(),b.length());i++){
         bool a_bit = (bool) (a[i] - '0');
         bool b_bit = (bool) (b[i] - '0');
         bool x_bit = a_bit^b_bit;
@@ -22,7 +22,7 @@ string modulo_2_division(string a,string b){
     for(int i = 0;i < extra;i++)
         b += string("0");
 
-    while(a.length() >= b_len){
+    while( (int) a.length() >= b_len){
         if(a[0] == '1') a = XOR(a,b);
         a.erase(0,1);//erase first char
         b.pop_back();//erase last char
@@ -43,7 +43,7 @@ string CRC_checksum(string data_frame,string generator_polynomial){
 
 bool CRC_checksum_matching(string data_frame,string generator_polynomial){
     string rem = modulo_2_division(data_frame,generator_polynomial);
-    for(int i = 0;i < rem.size();i++)
+    for(int i = 0;i < (int) rem.size();i++)
         if(rem[i] != '0') return false;
     return true;
 }

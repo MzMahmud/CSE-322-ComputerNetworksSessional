@@ -2,14 +2,14 @@
 
 string string_to_bitstring(string str){
     string bit_str("");
-    for(int i = 0;i < (int)str.length();i++)
+    for(int i = 0;i < (int) str.length();i++)
         bit_str += string(bitset<8>(str[i]).to_string());
     return bit_str;
 }
 
 string bitstring_to_string(string bit_str){
     string str("");
-    for(int i = 0;i < (int)bit_str.length();i += 8){
+    for(int i = 0;i < (int) bit_str.length();i += 8){
         char cstr[10];
         sprintf(cstr,"%c",stoi(bit_str.substr(i,8),nullptr,2));
         str += string(cstr);
@@ -61,7 +61,7 @@ string get_hamming_code(string bit_str,int m){
 }
 
 void print_hamming_code(string hamming_code){
-    for(int i = 1;i <= hamming_code.length();i++){
+    for(int i = 1;i <= (int) hamming_code.length();i++){
         if(is_power_of_2(i))
             //makes the text GREEN in terminal
             printf(GRN "%c" RESET_COL, hamming_code[i-1]);
@@ -103,7 +103,7 @@ string hamming_correction(string hamming_code,int m){
 string serialize_column_major(vector<string> data_block,int col){
     string serialized("");
     for(int i = 0;i < col;i++)
-        for(int j = 0;j < data_block.size();j++)
+        for(int j = 0;j < (int) data_block.size();j++)
             serialized += data_block[j].substr(i,1);
     return serialized;
 }
@@ -113,7 +113,7 @@ vector<string> deserialize_column_major(string data_frame,int row){
     for(int i = 0;i < row;i++)
         data_block.push_back(string(""));
 
-    for(int i = 0;i < data_frame.size();i++)
+    for(int i = 0;i < (int) data_frame.size();i++)
         data_block[i%row] += data_frame.substr(i,1);
 
     return data_block;
@@ -125,7 +125,7 @@ string transmit(string data_frame,double corruption_probability,map<int,bool>& i
     mt19937 gen(rd()); //Standard mersenne_twister_engine seeded with rd()
     uniform_real_distribution<> dis(0.0, 1.0); //random number in [0,1]
 
-    for(int i = 0;i < data_frame.size();i++){
+    for(int i = 0;i < (int) data_frame.size();i++){
         double random_number = dis(gen);
         if(random_number < corruption_probability){
             data_frame[i] = (data_frame[i] == '0')?'1':'0';//flips bits
@@ -136,7 +136,7 @@ string transmit(string data_frame,double corruption_probability,map<int,bool>& i
 }
 
 void print_corrupted_data(string data,map<int,bool>& is_corrupted){
-    for(int i = 0;i < data.length();i++){
+    for(int i = 0;i < (int) data.length();i++){
         if(is_corrupted[i])
             //makes the color red in terminal
             printf(RED "%c" RESET_COL,data[i]);
@@ -149,7 +149,7 @@ void print_corrupted_data(string data,map<int,bool>& is_corrupted){
 void print_corrupted_data(vector<string> data_block,map<int,bool>& is_corrupted){
     int row = (int) data_block.size();
     for(int i = 0;i < row;i++){
-        for(int j = 0;j < data_block[i].length();j++){
+        for(int j = 0;j < (int) data_block[i].length();j++){
             //column-major order to linear index
             //(i,j) -> j*row + i
             if(is_corrupted[j*row + i])
